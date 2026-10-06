@@ -6,6 +6,8 @@ ENV PATH="/opt/hexstrike-env/bin:/usr/local/bin:$PATH"
 
 # System packages — kali tools + all build/runtime deps in one layer
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+    python3 python3-pip python3-venv python3-dev \
+    pkg-config libglib2.0-dev \
     # Network & recon
     nmap masscan dnsrecon dnsenum fierce amass \
     netcat-openbsd net-tools arp-scan nbtscan whois \
