@@ -29,7 +29,6 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
     # Wireless
     aircrack-ng \
     # Runtime & build deps
-    python3 python3-pip python3-venv python3-dev \
     default-jdk \
     ruby ruby-dev build-essential \
     chromium chromium-driver \
@@ -172,7 +171,6 @@ RUN python3 -m venv /opt/hexstrike-env && \
         "webdriver-manager>=4.0.0,<5.0.0" \
         "aiohttp>=3.8.0,<4.0.0"
 
-RUN /opt/hexstrike-env/bin/pip install --no-cache-dir "bcrypt==4.0.1" "pwntools>=4.10.0,<5.0.0"
 
 # angr installs first so its protobuf version wins; mitmproxy is installed last and
 # its protobuf pin is relaxed to avoid blocking the install of either package.
