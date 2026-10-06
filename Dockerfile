@@ -44,6 +44,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
 
 # Additional Kali tools not in the main layer
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    cmake \
     # Network / AD
     netexec enum4linux \
     # Web security
